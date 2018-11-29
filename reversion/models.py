@@ -49,7 +49,7 @@ class Revision(models.Model):
         settings.AUTH_USER_MODEL,
         blank=True,
         null=True,
-        on_delete=models.SET_NULL,
+        on_delete=models.DO_NOTHING,
         verbose_name=_("user"),
         help_text="The user who created this revision.",
     )
