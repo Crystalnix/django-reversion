@@ -52,6 +52,7 @@ class Revision(models.Model):
         on_delete=models.DO_NOTHING,
         verbose_name=_("user"),
         help_text="The user who created this revision.",
+        db_constraint=False
     )
 
     comment = models.TextField(
