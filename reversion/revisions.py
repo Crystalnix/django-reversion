@@ -258,7 +258,7 @@ def _save_revision(versions, user=None, comment="", meta=(), date_created=None, 
         version.save(using=using)
     # Save the meta information.
     for meta_model, meta_fields in meta:
-        meta_model._base_manager.db_manager(using=using).create(
+        meta_model._base_manager.db_manager().create(
             revision=revision,
             **meta_fields
         )
